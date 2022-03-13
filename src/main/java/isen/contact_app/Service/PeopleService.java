@@ -70,7 +70,7 @@ public class PeopleService {
                 String str = "BEGIN:VCARD\n" + "VERSION:4.0\n"+ "N:People;;;\n" + "ID:" + p.getId() + "\n"
                         + "FIRSTNAME:" + p.getFirstName() + "\n" + "LASTNAME:" + p.getLastName()
                         + "\n" + "NICKNAME:" + p.getNickName() + "\n" + "PHONENUMBER:"
-                        + p.getPhoneNumber() + "\n" + "EMAIL:" + p.getMailAddress() + "\n"
+                        + p.getPhoneNumber() + "\n" + "EMAIL:" + p.getEmailAddress() + "\n"
                         + "ADDRESS:" + p.getAddress() + "BIRTHDAY:"
                         + p.getBirthDate()+ "\n"
 

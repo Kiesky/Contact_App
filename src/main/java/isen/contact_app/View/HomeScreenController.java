@@ -89,7 +89,7 @@ public class HomeScreenController {
         lastNameCol.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getLastName()));
         nickNameCol.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getNickName()));
         phoneNumberCol.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getPhoneNumber()));
-        emailAddressCol.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getMailAddress()));
+        emailAddressCol.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getEmailAddress()));
         birthDateCol.setCellValueFactory(cellData ->  new SimpleStringProperty(cellData.getValue().getBirthDate().toString()));
 
         addressCol.setCellValueFactory(cellData->new SimpleStringProperty(cellData.getValue().getAddress()));
