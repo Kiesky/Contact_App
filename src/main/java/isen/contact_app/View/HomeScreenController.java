@@ -72,7 +72,7 @@ public class HomeScreenController {
         //
         deleteButton.getStyleClass().setAll("btn","btn-danger");
         addButton.getStyleClass().setAll("btn","btn-success");
-        exportButton.getStyleClass().setAll("btn","btn-primary");
+        exportButton.getStyleClass().setAll("btn","btn-warning");
 
 
         //

@@ -22,16 +22,16 @@ public class PeopleService {
         peopleObservableList= FXCollections.observableArrayList();
         peopleObservableList.addAll(peopleDao.listOfPeople());
         if(peopleObservableList.size()<=0) {
-            peopleDao.addPeople(new People(0, "Ofori", "Joshua", "anhydrous", "0758153585", "1 rue du mons",
-                    "oforijoshua37@gmail.com", new Date(99,01,20)));
-            peopleDao.addPeople(new People(0, "Adjei", "Anthony", "d'accord", "075367580", "76 rue du trichon", "tonyadjei@gmail.com",
-                    new Date(99,1,20)));
-            peopleDao.addPeople(new People(0, "Harris", "Hibic", "e-brace", "075365782", "1 rue du bouvedan", "harrishibic@gmail.com",
-                    new Date(99,1,20)));
-            peopleDao.addPeople(new People(1, "Timo", "Wener", "turbo", "175346781", "stamford bridge", "timowener@gmail.com",
-                    new Date(99,1,20)));
-            peopleDao.addPeople(new People(0, "Hudson", "Odoi", "star boy", "237536780", "stamford bridge", "hudsonodoi@gmail.com",
-                    new Date(99,1,20)));
+            peopleDao.addPeople(new People(0, "Boateng", "Samuel", "Sammybee", "0751544735", "1 rue d`austerlitz tourcoing", "sbee1796@gmail.com", 
+            new Date(97,10,20)));
+            peopleDao.addPeople(new People(0, "Tobbal", "Kevin", "Kevin", "072694590", "52 rue des fleurs", "kevintobbal@gmail.com",
+                   new Date(98,3,20)));
+            peopleDao.addPeople(new People(0, "Hope", "James", "Handsome", "076369211", "25 rue de eglise ", "hopejames@gmail.com",
+                    new Date(98,1,28)));
+            peopleDao.addPeople(new People(1, "Mary", "Johnson", "show girl", "076154211", "56 rue emile    zola", "maryjohnson@gmail.com",
+                    new Date(97,12,20)));
+            peopleDao.addPeople(new People(0, "Steveson", "Ken", "cloud", "072694555", "8 rue des fleurs", "cloudsteveson@gmail.com",
+                    new Date(99,11,20)));
 
             peopleObservableList.addAll(peopleDao.listOfPeople());
         }

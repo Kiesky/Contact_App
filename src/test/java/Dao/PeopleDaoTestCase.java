@@ -46,7 +46,7 @@ public class PeopleDaoTestCase {
         // THEN
         assertThat(films).hasSize(1);
         assertThat(films).extracting("id","lastname", "firstname", "nickname", "phoneNumber", "address", "emailAddress","birthDate").containsOnly(
-                tuple(1, "Ofori","Joshua","anhydrous","0758153585","1 rue de mons embarol","oforijoshua37@gmail.com", new Date(20/02/1999)));
+                tuple(1,"Boateng", "Samuel", "Sammybee", "0751544735", "1 rue d`austerlitz tourcoing", "sbee1796@gmail.com", new Date(20/10/1997)));
 
 
     }
@@ -78,8 +78,8 @@ public class PeopleDaoTestCase {
         //    private Integer id;
 
         // WHEN
-        People people = new People(2,"Samuel","Boakye","e-brace","07536780","76 rue du trichon","samuel@gmail.com",
-                new Date(20/02/1999));
+        People people = new People(2,0, "Tobbal", "Kevin", "Kevin", "072694590", "52 rue des fleurs", "kevintobbal@gmail.com",
+                new Date(20/03/1998));
         peopleDao.addPeople(people);
         // THEN
         Connection connection = DataSourceFactory.getDataSource().getConnection();
