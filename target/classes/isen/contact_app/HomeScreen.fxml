@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="513.0" prefWidth="1052.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="isen.contact_app.View.HomeScreenController">
+    <TableView fx:id="tableView" editable="true" layoutX="243.0" layoutY="15.0" prefHeight="470.0" prefWidth="794.0">
+        <columns>
+            <TableColumn fx:id="firstNameCol" prefWidth="115.99993896484375" text="First Name" />
+            <TableColumn fx:id="lastNameCol" prefWidth="99.199951171875" text="Last Name" />
+            <TableColumn fx:id="nickNameCol" prefWidth="98.39996337890625" text="Nick Name" />
+            <TableColumn fx:id="phoneNumberCol" prefWidth="99.19998168945312" text="Phone" />
+            <TableColumn fx:id="emailAddressCol" prefWidth="188.80010986328125" text="Email Address" />
+            <TableColumn fx:id="birthDateCol" prefWidth="84.7999267578125" text="Birth Date" />
+            <TableColumn fx:id="addressCol" prefWidth="104.0" text="Address" />
+        </columns>
+    </TableView>
+    <TextField fx:id="firstNameTxt" layoutX="20.0" layoutY="46.0" />
+    <TextField fx:id="lastNameTxt" layoutX="20.0" layoutY="95.0" />
+    <TextField fx:id="nickNameTxt" layoutX="20.0" layoutY="147.0" />
+    <TextField fx:id="phoneTxt" layoutX="20.0" layoutY="199.0" />
+    <TextField fx:id="emailTxt" layoutX="20.0" layoutY="250.0" />
+    <TextField fx:id="addressTxt" layoutX="20.0" layoutY="300.0" />
+    <DatePicker fx:id="birthDayTxt" layoutX="19.0" layoutY="351.0" />
+    <Button fx:id="addButton" layoutX="20.0" layoutY="398.0" mnemonicParsing="false" text="Add" />
+    <Button fx:id="deleteButton" disable="true" layoutX="106.0" layoutY="398.0" mnemonicParsing="false" text="Delete" />
+    <Button fx:id="exportButton" layoutX="42.0" layoutY="439.0" mnemonicParsing="false" text="Export to File" />
+    <Label layoutX="58.0" layoutY="15.0" text="Add Person">
+        <font>
+            <Font name="Symbol" size="18.0" />
+        </font>
+    </Label>
+</AnchorPane>
+

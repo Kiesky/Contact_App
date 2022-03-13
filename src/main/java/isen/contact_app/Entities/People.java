@@ -10,19 +10,19 @@ public class People {
     private String nickName;
     private String phoneNumber;
     private String address;
-    private String mailAddress;
+    private String emailAddress;
     private Date birthDate;
 
     public People(){}
 
-    public People(Integer id, String lastName, String firstName, String nickName, String phoneNumber, String address, String mailAddress, Date birthDate) {
+    public People(Integer id, String lastName, String firstName, String nickName, String phoneNumber, String address, String emailAddress, Date birthDate) {
         this.id = id;
         this.lastName = lastName;
         this.firstName = firstName;
         this.nickName = nickName;
         this.phoneNumber = phoneNumber;
         this.address = address;
-        this.mailAddress = mailAddress;
+        this.emailAddress = emailAddress;
         this.birthDate = birthDate;
     }
 
@@ -74,12 +74,12 @@ public class People {
         this.address = address;
     }
 
-    public String getMailAddress() {
-        return mailAddress;
+    public String getEmailAddress() {
+        return emailAddress;
     }
 
-    public void setMailAddress(String mailAddress) {
-        this.mailAddress = mailAddress;
+    public void setEmailAddress(String emailAddress) {
+        this.emailAddress = emailAddress;
     }
 
     public Date getBirthDate() {

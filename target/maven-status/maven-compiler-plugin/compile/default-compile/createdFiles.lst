@@ -1,0 +1,8 @@
+isen\contact_app\App.class
+isen\contact_app\Service\PeopleService.class
+isen\contact_app\View\HomeScreenController.class
+isen\contact_app\View\MainLayoutController.class
+isen\contact_app\Dao\PeopleDao.class
+isen\contact_app\Service\PeopleService$PeopleServiceHolder.class
+isen\contact_app\Util\PeopleValueFactory.class
+isen\contact_app\Entities\People.class
