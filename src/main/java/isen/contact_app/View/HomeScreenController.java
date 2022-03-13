@@ -82,7 +82,7 @@ public class HomeScreenController {
         emailTxt.setPromptText("Email");
         addressTxt.setPromptText("Address");
         phoneTxt.setPromptText("Phone Number");
-        birthDayTxt.setPromptText("Birth Date egs 1999-02-20");
+        birthDayTxt.setPromptText("Birth Date ex: 2000-02-17");
 
 
         firstNameCol.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getFirstName()));

@@ -17,7 +17,7 @@
             <TableColumn fx:id="nickNameCol" prefWidth="98.39996337890625" text="Nick Name" />
             <TableColumn fx:id="phoneNumberCol" prefWidth="99.19998168945312" text="Phone" />
             <TableColumn fx:id="emailAddressCol" prefWidth="188.80010986328125" text="Email Address" />
-            <TableColumn fx:id="birthDateCol" prefWidth="84.7999267578125" text="Birth Date" />
+            <TableColumn fx:id="birthDateCol" prefWidth="84.7999267578125" text="Birth Date " />
             <TableColumn fx:id="addressCol" prefWidth="104.0" text="Address" />
         </columns>
     </TableView>
