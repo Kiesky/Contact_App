@@ -67,14 +67,14 @@ public class PeopleDao {
 
     public People addPeople(People people){
         try (Connection connection = getDataSource().getConnection()){
-            String sqlQuery = "INSERT INTO people(lastname, firstname, nickname, phoneNumber, address, mailAddress, birthDate) VALUES(?,?,?,?,?,?,?)";
+            String sqlQuery = "INSERT INTO people(lastname, firstname, nickname, phoneNumber, address, emailAddress, birthDate) VALUES(?,?,?,?,?,?,?)";
             try(PreparedStatement statement = connection.prepareStatement(sqlQuery, Statement.RETURN_GENERATED_KEYS)){
                 statement.setString(1, people.getLastName());
                 statement.setString(2, people.getFirstName());
                 statement.setString(3, people.getNickName());
                 statement.setString(4, people.getPhoneNumber());
                 statement.setString(5,people.getAddress());
-                statement.setString(6, people.getMailAddress());
+                statement.setString(6, people.getEmailAddress());
                 statement.setDate(7, people.getBirthDate());
                 statement.executeUpdate();
                 ResultSet id = statement.getGeneratedKeys();
@@ -85,7 +85,7 @@ public class PeopleDao {
                             people.getNickName(),
                             people.getPhoneNumber(),
                             people.getAddress(),
-                            people.getMailAddress(),
+                            people.getEmailAddress(),
                             people.getBirthDate());
                 }
             }
@@ -154,7 +154,7 @@ public class PeopleDao {
                             + "  lastname VARCHAR(45) NOT NULL,\r\n"
                             + " firstname VARCHAR(45) NOT NULL,\r\n"
                             + " nickname VARCHAR(45) NOT NULL,\r\n"
-                            + " phoneNumber VARCHAR(15) NULL,\r\\n"
+                            + " phoneNumber VARCHAR(15) NULL,\r\n"
                             + " address VARCHAR(200)  NULL,\r\n"
                             + " emailAddress VARCHAR(150) NULL,\r\n"
                             + "birthDate DATETIME NULL);"

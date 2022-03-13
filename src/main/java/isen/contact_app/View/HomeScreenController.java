@@ -72,7 +72,7 @@ public class HomeScreenController {
         //
         deleteButton.getStyleClass().setAll("btn","btn-danger");
         addButton.getStyleClass().setAll("btn","btn-success");
-        exportButton.getStyleClass().setAll("btn","btn-primary");
+        exportButton.getStyleClass().setAll("btn","btn-warning");
 
 
         //
@@ -89,7 +89,7 @@ public class HomeScreenController {
         lastNameCol.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getLastName()));
         nickNameCol.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getNickName()));
         phoneNumberCol.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getPhoneNumber()));
-        emailAddressCol.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getMailAddress()));
+        emailAddressCol.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getEmailAddress()));
         birthDateCol.setCellValueFactory(cellData ->  new SimpleStringProperty(cellData.getValue().getBirthDate().toString()));
 
         addressCol.setCellValueFactory(cellData->new SimpleStringProperty(cellData.getValue().getAddress()));

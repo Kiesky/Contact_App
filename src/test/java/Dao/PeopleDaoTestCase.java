@@ -31,7 +31,7 @@ public class PeopleDaoTestCase {
                         + " emailAddress VARCHAR(150) NULL,\r\n"	+ "  birthDate DATETIME NULL);" );
         stmt.executeUpdate("DELETE FROM people");
         stmt.executeUpdate("INSERT INTO people(idpeople,lastname, firstname, nickname, phoneNumber, address, emailAddress,birthDate) "
-                + "VALUES (1, 'Ofori','Joshua','anhydrous','0758153585','1 rue de mons embarol','oforijoshua37@gmail.com', 20/02/1999 )");
+                + "VALUES (1, 'Boateng','Samuel','Sammybee','0751544735','1 rue d`austerlitz tourcoing','sbee1796@gmail.com', 20/10/1997 )");
         stmt.close();
         connection.close();
     }
@@ -45,8 +45,8 @@ public class PeopleDaoTestCase {
 
         // THEN
         assertThat(films).hasSize(1);
-        assertThat(films).extracting("id","lastname", "firstname", "nickname", "phoneNumber", "address", "emailAddress","birthDate").containsOnly(
-                tuple(1, "Ofori","Joshua","anhydrous","0758153585","1 rue de mons embarol","oforijoshua37@gmail.com", new Date(20/02/1999)));
+        assertThat(films).extracting("id","lastName", "firstName", "nickName", "phoneNumber", "address", "emailAddress","birthDate").containsOnly(
+                tuple(1,"Boateng", "Samuel", "Sammybee", "0751544735", "1 rue d`austerlitz tourcoing", "sbee1796@gmail.com", new Date(20/10/1997)));
 
 
     }
@@ -78,21 +78,21 @@ public class PeopleDaoTestCase {
         //    private Integer id;
 
         // WHEN
-        People people = new People(2,"Samuel","Boakye","e-brace","07536780","76 rue du trichon","samuel@gmail.com",
-                new Date(20/02/1999));
+        People people = new People(0, "Tobbal", "Kevin", "Kevin", "072694590", "52 rue des fleurs", "kevintobbal@gmail.com",
+                new Date(20/03/1998));
         peopleDao.addPeople(people);
         // THEN
         Connection connection = DataSourceFactory.getDataSource().getConnection();
         Statement statement = connection.createStatement();
-        ResultSet resultSet = statement.executeQuery("SELECT * FROM people WHERE lastname='Samuel'");
+        ResultSet resultSet = statement.executeQuery("SELECT * FROM people WHERE lastname='Tobbal'");
         assertThat(resultSet.next()).isTrue();
         assertThat(resultSet.getInt("idpeople")).isNotNull();
-        assertThat(resultSet.getString("firstname")).isEqualTo("Boakye");
-        assertThat(resultSet.getDate("birthDate")).isEqualTo(new Date(20/02/1999));
-        assertThat(resultSet.getString("nickname")).isEqualTo("e-brace");
-        assertThat(resultSet.getString("phoneNumber")).isEqualTo("07536780");
-        assertThat(resultSet.getString("address")).isEqualTo("76 rue du trichon");
-        assertThat(resultSet.getString("emailAddress")).isEqualTo("samuel@gmail.com");
+        assertThat(resultSet.getString("firstname")).isEqualTo("Kevin");
+        assertThat(resultSet.getDate("birthDate")).isEqualTo(new Date(20/03/1998));
+        assertThat(resultSet.getString("nickname")).isEqualTo("Kevin");
+        assertThat(resultSet.getString("phoneNumber")).isEqualTo("072694590");
+        assertThat(resultSet.getString("address")).isEqualTo("52 rue des fleurs");
+        assertThat(resultSet.getString("emailAddress")).isEqualTo("kevintobbal@gmail.com");
         assertThat(resultSet.next()).isFalse();
         assertThat(resultSet.next()).isFalse();
         resultSet.close();
